@@ -8,13 +8,17 @@ main{width: 100%; max-width: 1366px; margin: 0 auto;}
 .topo{width: 100%; display: flex; align-items: center; justify-content: space-between; background-color: black; padding: 10px;}
 .topo .logo{background-image: url(../img/6088624.png); background-position: center; background-repeat: no-repeat; background-size: contain; width: 130px; height:60px; font-size: 0px;}
 .menu {display: flex; align-items: center;}
-.menu i{font-size: 24px;}
+.menu li i.fa-home{font-size: 24px; color: #fff;}
 .menu a{color: white; padding: 10px; text-transform: uppercase; font-weight: bolder; display: block;}
 .menu a:hover {color: gray;}
+.menu.active{left: 0; transition: all 0.6s;}/*classe adicionada para o menu responsivo*/
+.topo i.fa-bars{color: white; display: block; cursor: pointer; display: none; font-size:24px;}
 @media screen and (max-width:812px){
-    .topo {flex-direction: column; text-align: center;}
+    .topo {flex-direction: column; text-align: center; justify-content: space-around;}
+    .topo i.fa-bars{display: block; position: absolute; right:20px; top: 25px;}
     .logo{width: 100px; height: 50px;}
-    .menu {flex-direction: column; width: 100%; position: absolute; background: black; left: 0;}
+    .menu {flex-direction: column; width: 100%; position: absolute; background: black;top: 80px; left: -100%; transition: all 0.6s;}
+    .menu{background-color: rgba(0, 0, 0, 0.69);}
     .menu i{font-size: 16px;}
     .menu li {width: 100%; border-bottom: 1px solid white;}
     .menu li:first-child {border-top: 1px solid white;}
@@ -29,7 +33,7 @@ main{width: 100%; max-width: 1366px; margin: 0 auto;}
 .capa a{margin-top:50px; background: #0c0cfa; color: #fff; text-transform: uppercase; font: 1.3rem; border-radius: 10px; padding: 10px 30px; font-weight: bolder;}
 .capa a:hover{ opacity: .8;}
 @media screen and (max-width:812px){
-    .capa h1{font-size: 1rem; margin-top: 100px; font-weight: 700;}
+    .capa h1{font-size: 1rem; font-weight: 700;}
     .capa a{font-size: 1rem; margin-top:70px;}
 }
 /*fim da capa*/
@@ -83,7 +87,6 @@ main{width: 100%; max-width: 1366px; margin: 0 auto;}
 .sobre h1, .sobre h2{font-size: 2rem; text-transform: uppercase; color: #ba4e00; text-shadow: 3px 3px 3px black; padding: 40px 0 10px;}
 @media screen and (max-width:812px){
     .sobre p {width: 100%; padding: 10px; }
-    .sobre h1{margin-top: 80px;}
     .sobre h2{ padding-top: 10px;}
     .sobre h1, .sobre h2{font-size: 1rem; text-shadow: none;}
     .trabalhos {flex-direction: column;}
@@ -105,7 +108,6 @@ main{width: 100%; max-width: 1366px; margin: 0 auto;}
 .localizacao{ width: 960px; height: 400px; margin: 20px auto; max-width: 960px;}
 .localizacao iframe{width: 960px; height: 400px; box-shadow: 3px 3px 5px black;}
 @media screen and (max-width:812px){
-    address{margin-top: 100px;}
     .contato{flex-direction: column; width: 90%; margin:20px auto;}  
     .address_rsocial span, .contato h2{font-size: 1rem; text-shadow: none;}
     .tamanho {width: 100%;}
