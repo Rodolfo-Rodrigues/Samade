@@ -1,0 +1,119 @@
+/*css reset*/
+* {margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; font-size: 100%; font-family: sans-serif; scroll-behavior;}
+img {max-width: 100%;}
+main{width: 100%; max-width: 1366px; margin: 0 auto;}
+/*fim do css reset*/
+
+/*topo*/
+.topo{width: 100%; display: flex; align-items: center; justify-content: space-between; background-color: black; padding: 10px;}
+.topo .logo{background-image: url(../img/6088624.png); background-position: center; background-repeat: no-repeat; background-size: contain; width: 130px; height:60px; font-size: 0px;}
+.menu {display: flex; align-items: center;}
+.menu i{font-size: 24px;}
+.menu a{color: white; padding: 10px; text-transform: uppercase; font-weight: bolder; display: block;}
+.menu a:hover {color: gray;}
+@media screen and (max-width:812px){
+    .topo {flex-direction: column; text-align: center;}
+    .logo{width: 100px; height: 50px;}
+    .menu {flex-direction: column; width: 100%; position: absolute; background: black; left: 0;}
+    .menu i{font-size: 16px;}
+    .menu li {width: 100%; border-bottom: 1px solid white;}
+    .menu li:first-child {border-top: 1px solid white;}
+    .menu li:hover{background: rgba(33, 33, 33, 0.65);}
+    .menu a{font-size: 1rem;}
+}
+/*fim do topo*/
+
+/*capa*/
+.capa{background-image: url(../img/capa.jpg); background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; height: calc(100vh - 80px); display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; width: 100%; max-width: 1920px; margin: 0 auto;}
+.capa h1{font-size: 2rem; text-transform: uppercase; color: white; text-shadow: 3px 3px 3px black;}
+.capa a{margin-top:50px; background: #0c0cfa; color: #fff; text-transform: uppercase; font: 1.3rem; border-radius: 10px; padding: 10px 30px; font-weight: bolder;}
+.capa a:hover{ opacity: .8;}
+@media screen and (max-width:812px){
+    .capa h1{font-size: 1rem; margin-top: 100px; font-weight: 700;}
+    .capa a{font-size: 1rem; margin-top:70px;}
+}
+/*fim da capa*/
+
+/*serviços*/
+.servicos {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%; color: #ba4e00;}
+.servicos h2{ font-size: 2rem; text-transform: uppercase; color: #ba4e00; text-shadow: 3px 3px 3px black; padding: 40px 0 10px; border-bottom: 2px solid white; font-weight: bold;}
+.servicos .grid{display: flex; flex-wrap: wrap; margin-top: 15px;}
+.servicos .grid li{flex:1 0 20%; padding: 15px; background-color: #d4d4d4; margin: 10px; box-shadow: 3px 3px 6px black; border-radius: 10px;}
+.servicos .grid li:hover {opacity: 0.7;}
+.servicos .grid li i{font-size: 2.5rem;}
+.servicos .grid li p{ padding: 15px; font-weight: bold;}
+@media screen and (max-width:812px){
+    .servicos h2{font-size: 1rem; text-shadow: none;}
+    .servicos .grid{flex-direction: column;}
+    .servicos .grid li{flex-basis: 100%;} 
+}
+/*fim dos serviços*/
+
+/*clientes*/
+.clientes {display: flex; flex-direction: column; width: 100%; align-items: center; justify-content: center;}
+.clientes h3 {font-size: 2rem; text-transform: uppercase; color: #ba4e00; text-shadow: 3px 3px 3px black; padding: 40px 0 10px;}
+.logotipos {display: flex;}
+.logotipos li{flex: 1 0 20%; margin: 10px;}
+.logotipos img {box-shadow: 3px 3px 6px black; border-radius: 10px;}
+.logotipos img:hover{opacity: .7;}
+@media screen and (max-width:812px){
+    .clientes h3{font-size: 1rem; text-shadow: none;}
+    .logotipos {flex-direction: column;}
+    .logotipos li{flex: 1 0 100%;}
+}
+/*fim dos clientes*/
+
+/*rodapé*/
+.rodape{width: 100%; display: flex; justify-content: space-between; padding: 10px; align-items: center; background-color: black; color: #fff; margin-top: 30px; flex-wrap: wrap; text-align: center;}
+.rodape img{width: 130px; height:60px;}
+.rodape a{font-size: 0px;}
+@media screen and (max-width:812px){
+    .rodape {flex-direction: column;}
+    .rodape h4{margin: 10px;}
+}
+/*fim do rodapé*/
+
+/*página sobre*/
+.sobre{width: 100%; display: flex; flex-direction: column; text-align: center; justify-content: center;}
+.trabalhos {display: flex; flex-wrap: wrap;}
+.trabalhos li{flex:1 0 30%; margin: 10px;}
+.trabalhos img{box-shadow: 3px 3px 6px black; border-radius: 20px;}
+.trabalhos img:hover{opacity: 0.8;}
+.sobre p {width: 960px; max-width: 960px; margin: 0 auto; text-align: justify; line-height: 1.5rem; font-weight: 550; margin-bottom: 20px;}
+.sobre h1, .sobre h2{font-size: 2rem; text-transform: uppercase; color: #ba4e00; text-shadow: 3px 3px 3px black; padding: 40px 0 10px;}
+@media screen and (max-width:812px){
+    .sobre p {width: 100%; padding: 10px; }
+    .sobre h1{margin-top: 80px;}
+    .sobre h2{ padding-top: 10px;}
+    .sobre h1, .sobre h2{font-size: 1rem; text-shadow: none;}
+    .trabalhos {flex-direction: column;}
+    .trabalho li {flex-basis: 100%;}
+}
+/*fim da página sobre*/
+
+/*página contatos*/
+.contato {display: flex; width: 960px; max-width: 960px; margin: 0 auto; align-items: center; justify-content: center; text-align: center; margin-top: 80px; box-shadow: 3px 3px 6px black; padding: 10px;}
+.address_rsocial span, .contato h2{font-size: 1.5rem; text-transform: uppercase; color: #ba4e00; text-shadow: 3px 3px 3px black; padding: 10px; text-align: center;}
+.formulario, .address_rsocial{display: flex; flex-direction: column; flex-basis: 41%;}
+.contato form, .contato .address_rsocial{ margin: 0 auto;}
+.contato i{margin: 10px; color:#ba4e00; font-size: 2rem;}
+.contato i:hover{opacity: 0.8;}
+.tamanho {width: 400px; max-height: 400px; text-align: center; padding: 5px; margin: 5px; box-shadow: 3px 3px 2px black; border: 0.4px solid black; background: #e8e6e6;}
+.textarea{resize: none;}
+.enviar{width: 90px; align-self: flex-end; padding: 5px; margin: 5px; text-transform: capitalize; background-color: blue; color: white; border-radius: 10px; cursor: pointer; border: none;}
+.enviar:hover{opacity: 0.8}
+.localizacao{ width: 960px; height: 400px; margin: 20px auto; max-width: 960px;}
+.localizacao iframe{width: 960px; height: 400px; box-shadow: 3px 3px 5px black;}
+@media screen and (max-width:812px){
+    address{margin-top: 100px;}
+    .contato{flex-direction: column; width: 90%; margin:20px auto;}  
+    .address_rsocial span, .contato h2{font-size: 1rem; text-shadow: none;}
+    .tamanho {width: 100%;}
+    .localizacao, .localizacao iframe {width: 100%;}
+    .localizacao{padding: 10px;}
+}
+/*fim da página contatos*/
+
+
+
+
